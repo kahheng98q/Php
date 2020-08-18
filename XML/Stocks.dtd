@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT stocks (stock*)>
+<!ELEMENT stock (stockName, unitPrice,type,weightUnit,soldqty,mainTotalPrice)>
+<!ATTLIST stock  stockid ID #REQUIRED>
+<!ELEMENT stockName (#PCDATA)>
+<!ELEMENT unitPrice (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT weightUnit (#PCDATA)>
+<!ELEMENT soldqty (#PCDATA)>
+<!ELEMENT mainTotalPrice (#PCDATA)>
+
+
