@@ -28,22 +28,9 @@ class StockFactory {
 
     public function setStock($StockID, $StockName, $UnitPrice, $Type, $Quantity, $Volume) {
         if (strcasecmp(strtoupper($Type), "SOLID") == 0) {
-
             return new StockSolid($StockID, $StockName, $UnitPrice, $Type, $Quantity, $Volume);
         } else if (strcasecmp(strtoupper($Type), "LIQUID") == 0) {
             return new StockLiquid($StockID, $StockName, $UnitPrice, $Type, $Quantity, $Volume);
-        } else {
-            
-        }
-    }
-
-    public function setStockReport($StockID, $StockName, $UnitPrice, $Type, $Volume, $Quantity) {
-        if (strcasecmp(strtoupper($Type), "SOLID") == 0) {
-
-            return new StockSolid($StockID, $StockName, $UnitPrice, $Type, $Volume, $Quantity);
-        } else if (strcasecmp(strtoupper($Type), "LIQUID") == 0) {
-            echo $Type;
-            return new StockLiquid($StockID, $StockName, $UnitPrice, $Type, $Volume, $Quantity);
         } else {
             
         }

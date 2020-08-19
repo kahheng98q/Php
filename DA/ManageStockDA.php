@@ -4,19 +4,38 @@ require_once '../Domain/ManageStock.php';
 
 class ManageStockDA {
 
-    public function AddManageStock($manageStock) {
-        $query = "Insert Into ManageStock (ManageStockID,EditDate,StockID,StaffID) values (?,?,?,?)";
-//        $rs = $this->db->query($query);
+    private $dbName = "bianbiansql";
+    private $pass = "";
+    private $host = 'localhost';
+    private $user = "root";
+    private $db;
 
+    public function connectdb() {
+        try {
+
+            $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbName;
+            $this->db = new PDO($dsn, $this->user, $this->pass);
+            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $ex) {
+            die("Database connection failed: " . $ex->getMessage());
+        }
+    }
+
+    public function __construct() {
+        $this->connectdb();
+    }
+
+    public function AddManageStock($manageStock) {
+        $query = "Insert Into ManageStock (EditDate,Operation,StockID,StaffID) values (?,?,?,?)";
+//        echo $manageStock->EditDate.$manageStock->Operation.$manageStock->StockID.$manageStock->StaffID;
         try {
             $pstm = $this->db->prepare($query);
-            $pstm->bindParam(1, $stock->ManageStockID, PDO::PARAM_STR);
-            $pstm->bindParam(2, $stock->EditDate, PDO::PARAM_STR);
-            $pstm->bindParam(3, $stock->StockID, PDO::PARAM_STR);
-            $pstm->bindParam(4, $stock->StaffID, PDO::PARAM_STR);
+            $pstm->bindParam(1, $manageStock->EditDate, PDO::PARAM_STR);
+            $pstm->bindParam(2, $manageStock->Operation, PDO::PARAM_STR);
+            $pstm->bindParam(3, $manageStock->StockID, PDO::PARAM_STR);
+            $pstm->bindParam(4, $manageStock->StaffID, PDO::PARAM_STR);
             $pstm->execute();
-
-           
+            
         } catch (Exception $ex) {
             echo 'Failed to Manage Stock Record';
         }

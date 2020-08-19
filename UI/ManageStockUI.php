@@ -20,7 +20,8 @@ require_once '../DA/StockDA.php';
         $stockFactory = new StockFactory();
         $stockDA = new StockDA();
         $result = $stockDA->retrieveStocks();
-
+//        $staffID = $_POST["staffID"];
+        $staffID = "S001";
         echo "<table><tr><th>Stock ID</th><th>Stock Name</th><th>Unit Price</th><th>Type</th><th>QTY</th><th>Unit</th></tr><br/>";
         foreach ($result as $row) {
             echo "<tr><td>" . $row['StockID'] . "</td><td>" . $row['StockName'] . "</td><td>"
@@ -30,12 +31,16 @@ require_once '../DA/StockDA.php';
         }
         echo "</table>";
         ?>
-        <form action="InsertStock.php" method="POST">
-            <input type="submit" value="Insert New Record" name="addStockbtn" />
+        <form action="ProcessStockUI.php" method="POST">
+            <?php
+            echo "<input type=\"hidden\" name=\"staffid\" value=\"" . $staffID . "\"/>";
+            ?>
+            <input type="submit" value="Insert New Record" name="Addbtn" />
             <p>Stock ID:<input type="text" name="StockID" value="" size="20"/></p>
-            <input type="text" name="staffID" value="" size="20"/>
-            <input type="submit" value="Update" name="updateStockbtn" />
-            <input type="submit" value="Delete" name="DeleteStockbtn" />
+            <input type="submit" value="Update" name="Updatebtn" />
+            <input type="submit" value="Display Stock Summary Report" name="Reportbtn" />
         </form>
+
+
     </body>
 </html>

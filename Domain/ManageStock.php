@@ -15,12 +15,25 @@ class ManageStock {
 
     private $ManageStockID;
     private $EditDate;
+    private $Operation;
     private $StockID;
     private $StaffID;
 
-    public function __construct($ManageStockID="", $EditDate="", $StockID="", $StaffID="") {
+    public function connectdb() {
+        try {
+
+            $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbName;
+            $this->db = new PDO($dsn, $this->user, $this->pass);
+            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch (PDOException $ex) {
+            die("Database connection failed: " . $ex->getMessage());
+        }
+    }
+
+    public function __construct($ManageStockID = "", $EditDate = "", $Operation = "", $StockID = "", $StaffID = "") {
         $this->ManageStockID = $ManageStockID;
         $this->EditDate = $EditDate;
+        $this->Operation = $Operation;
         $this->StockID = $StockID;
         $this->StaffID = $StaffID;
     }

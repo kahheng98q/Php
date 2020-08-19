@@ -8,6 +8,7 @@ class StockSolid extends Stock {
         parent::__construct($StockID, $StockName, $UnitPrice, $Type, $Quantity, $WeightUnit);
     }
 
+
     public function &__set($name, $value) {
         parent::__set($name, $value);
     }
