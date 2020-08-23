@@ -11,7 +11,7 @@ require_once 'login.xml';
 function getCustomerXML() {
     $doc = new DOMDocument;
     $doc->preserveWhiteSpace = false;
-    $doc->load('login.xml');
+    $doc->load('../XML/login.xml');
     $xpath = new DOMXPath($doc);
     $query = "//Login/user[@type = 'Customer']";
     $nodes = $xpath->query($query);
@@ -30,7 +30,7 @@ function getCustomerXML() {
 function getStaffXML() {
     $doc = new DOMDocument;
     $doc->preserveWhiteSpace = false;
-    $doc->load('login.xml');
+    $doc->load('../XML/login.xml');
     $xpath = new DOMXPath($doc);
     $query = "//Login/user[@type = 'Staff']";
     $nodes = $xpath->query($query);

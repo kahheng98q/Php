@@ -5,7 +5,6 @@
 
 require_once '../Domain/FactoryMethod/StockFactory.php';
 
-
 class CreateStockXML {
 
     public function __construct($stockArray) {
@@ -21,7 +20,7 @@ class CreateStockXML {
         $root = $dom->createElement('stocks');
 
         foreach ($stockArray as $row) {
-
+     
             $stockid = $row['Stockid'];
             $stockName = $row['StockName'];
             $stockunitPrice = $row['UnitPrice'];

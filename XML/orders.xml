@@ -1,4 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--author: Chia Yang Jie-->
 <!DOCTYPE orders SYSTEM 'orders.dtd'>
-<orders><order OrderID="OA101"><OrderDate>2020-08-20</OrderDate><OrderStatus>Pending</OrderStatus><TotalAmount>20.20</TotalAmount><CustomerId>C10001</CustomerId></order><order OrderID="OA102"><OrderDate>2020-08-24</OrderDate><OrderStatus>Pending</OrderStatus><TotalAmount>20.20</TotalAmount><CustomerId>C10001</CustomerId></order><order OrderID="OA103"><OrderDate>2020-07-11</OrderDate><OrderStatus>Receive</OrderStatus><TotalAmount>20.20</TotalAmount><CustomerId>C10001</CustomerId></order><order OrderID="OA104"><OrderDate>2020-07-17</OrderDate><OrderStatus>Receive</OrderStatus><TotalAmount>20.20</TotalAmount><CustomerId>C10001</CustomerId></order><order OrderID="OA105"><OrderDate>2020-10-15</OrderDate><OrderStatus>Pending</OrderStatus><TotalAmount>20.20</TotalAmount><CustomerId>C10001</CustomerId></order><order OrderID="OA106"><OrderDate>2020-10-14</OrderDate><OrderStatus>Pending</OrderStatus><TotalAmount>20.20</TotalAmount><CustomerId>C10001</CustomerId></order><order OrderID="OA107"><OrderDate>2020-06-17</OrderDate><OrderStatus>Pending</OrderStatus><TotalAmount>20.20</TotalAmount><CustomerId>C10001</CustomerId></order></orders>
+<orders>
+    <order OrderID="OA101">
+        <OrderDate>2020-08-20</OrderDate>
+        <OrderStatus>Pending</OrderStatus>
+        <TotalAmount>20.20</TotalAmount>
+        <CustomerId>C10001</CustomerId>
+    </order>
+    <order OrderID="OA102">
+        <OrderDate>2020-08-24</OrderDate>
+        <OrderStatus>Pending</OrderStatus>
+        <TotalAmount>20.20</TotalAmount>
+        <CustomerId>C10001</CustomerId>
+    </order>
+    <order OrderID="OA103">
+        <OrderDate>2020-07-11</OrderDate>
+        <OrderStatus>Receive</OrderStatus>
+        <TotalAmount>20.20</TotalAmount>
+        <CustomerId>C10001</CustomerId>
+    </order>
+    <order OrderID="OA104">
+        <OrderDate>2020-07-17</OrderDate>
+        <OrderStatus>Receive</OrderStatus>
+        <TotalAmount>20.20</TotalAmount>
+        <CustomerId>C10001</CustomerId>
+    </order>
+    <order OrderID="OA105">
+        <OrderDate>2020-10-15</OrderDate>
+        <OrderStatus>Pending</OrderStatus>
+        <TotalAmount>20.20</TotalAmount>
+        <CustomerId>C10001</CustomerId>
+    </order>
+    <order OrderID="OA106">
+        <OrderDate>2020-10-14</OrderDate>
+        <OrderStatus>Pending</OrderStatus>
+        <TotalAmount>20.20</TotalAmount>
+        <CustomerId>C10001</CustomerId>
+    </order>
+    <order OrderID="OA107">
+        <OrderDate>2020-06-17</OrderDate>
+        <OrderStatus>Pending</OrderStatus>
+        <TotalAmount>20.20</TotalAmount>
+        <CustomerId>C10001</CustomerId>
+    </order>
+</orders>

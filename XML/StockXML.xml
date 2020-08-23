@@ -1,20 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE stocks SYSTEM 'Stocks.dtd'>
-<stocks>
-    <stock stockid="ST101">
-        <stockName>Book</stockName>
-        <unitPrice>2.00</unitPrice>
-        <type>Solid</type>
-        <weightUnit>5.00</weightUnit>
-        <soldqty>15</soldqty>
-        <mainTotalPrice>45.00</mainTotalPrice>
-    </stock>
-    <stock stockid="ST102">
-        <stockName>Bag</stockName>
-        <unitPrice>10.00</unitPrice>
-        <type>Solid</type>
-        <weightUnit>4.00</weightUnit>
-        <soldqty>9</soldqty>
-        <mainTotalPrice>18.00</mainTotalPrice>
-    </stock>
-</stocks>
+<stocks><stock stockid="ST101"><stockName>Bottle</stockName><unitPrice>3.00</unitPrice><type>Solid</type><weightUnit>0.30</weightUnit><soldqty>45</soldqty><mainTotalPrice>15.00</mainTotalPrice></stock><stock stockid="ST102"><stockName>Book</stockName><unitPrice>2.00</unitPrice><type>Solid</type><weightUnit>5.00</weightUnit><soldqty>12</soldqty><mainTotalPrice>6.00</mainTotalPrice></stock><stock stockid="ST103"><stockName>Bag</stockName><unitPrice>10.00</unitPrice><type>Solid</type><weightUnit>4.00</weightUnit><soldqty>21</soldqty><mainTotalPrice>8.00</mainTotalPrice></stock><stock stockid="ST104"><stockName>Coke</stockName><unitPrice>2.00</unitPrice><type>Solid</type><weightUnit>3.00</weightUnit><soldqty>21</soldqty><mainTotalPrice>8.00</mainTotalPrice></stock><stock stockid="ST105"><stockName>Beer</stockName><unitPrice>15.00</unitPrice><type>Solid</type><weightUnit>2.00</weightUnit><soldqty>6</soldqty><mainTotalPrice>3.00</mainTotalPrice></stock><stock stockid="ST106"><stockName>Rice</stockName><unitPrice>20.00</unitPrice><type>Solid</type><weightUnit>1.00</weightUnit><soldqty>15</soldqty><mainTotalPrice>5.00</mainTotalPrice></stock><stock stockid="ST107"><stockName>Sweet</stockName><unitPrice>1.00</unitPrice><type>Solid</type><weightUnit>0.50</weightUnit><soldqty>6</soldqty><mainTotalPrice>3.00</mainTotalPrice></stock></stocks>

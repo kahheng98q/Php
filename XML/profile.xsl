@@ -13,7 +13,7 @@ Student ID : 19WMR09599
                 <h1>User Profile</h1>
                 <hr />
                 <xsl:apply-templates/>
-                <br/><br/><input type="submit" name="out" value="LogOut" onclick="location.href='http://localhost/Assignment/UI/Login.php';"/>
+                <br/><br/><input type="submit" name="out" value="LogOut" onclick="location.href='http://localhost/PhpAssignment/UI/Login.php';"/>
             </body>
         </html>
     </xsl:template>
@@ -56,7 +56,7 @@ Student ID : 19WMR09599
                 </tr>
         </table>
         <!--change address accordingly-->
-        <br/><input type="submit" name="stock" value="Stock Management" onclick="location.href='http://localhost/Assignment/UI/StockManage.php';"/>
+        <br/><input type="submit" name="stock" value="Stock Management" onclick="location.href='http://localhost/PhpAssignment/UI/ManageStockUI.php';"/>
         <input type="submit" name="Sship" value="Manage Shipment" onclick="location.href='http://localhost/Assignment/UI/ShippingStaff.php';"/>
     </xsl:template>
 </xsl:stylesheet>

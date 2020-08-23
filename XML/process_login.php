@@ -6,12 +6,12 @@ Student ID : 19WMR09599
 
 require_once '..\DA\StaffDA.php';
 require_once '..\DA\CustDA.php';
-require_once 'login.xml';
+require_once '../XML/login.xml';
 require_once '..\XML\UserDetails.php';
 
 session_start();
 
-$xml = simplexml_load_file("login.xml");
+$xml = simplexml_load_file("../XML/login.xml");
 $sxe = new SimpleXMLElement($xml->asXML());
 
 if (isset($_POST['login'])) {
@@ -47,7 +47,7 @@ if (isset($_POST['login'])) {
             $user->addChild('password', $staff->getPass());
             $user->addChild('position', $staff->getPosition());
             $sxe->asXML("login.xml");
-            //getStaffXML();
+//            getStaffXML();
             header("Location: http://localhost/PhpAssignment/XML/login.xml");
             
         } else {

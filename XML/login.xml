@@ -2,4 +2,6 @@
 <?xml-stylesheet type="text/xsl" href="profile.xsl"?>
 <Login>
     
+    
+    
 <user type="Staff"><id>19SSM08</id><name>Heng</name><email>heng@gmail.com</email><password>123123</password><position>Senior Manager</position></user></Login>

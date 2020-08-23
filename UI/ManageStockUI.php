@@ -5,7 +5,7 @@
 require_once '../Domain/FactoryMethod/StockFactory.php';
 require_once '../DA/StockDA.php';
 require_once '../XML/UserDetails.php';
-require_once '../Domain/Staff.php';
+
 ?>
 
 <html>
@@ -20,7 +20,7 @@ require_once '../Domain/Staff.php';
         $stockDA = new StockDA();
         $result = $stockDA->retrieveStocks();
         $staff = getStaffXML();
-        $staffID = $staff->id;
+        $staffID = $staff->getid();
         echo "<table><tr><th>Stock ID</th><th>Stock Name</th><th>Unit Price</th><th>Type</th><th>QTY</th><th>Unit</th></tr><br/>";
         foreach ($result as $row) {
             echo "<tr><td>" . $row['StockID'] . "</td><td>" . $row['StockName'] . "</td><td>"

@@ -102,8 +102,7 @@ class StockDA {
 
     public function retrieveStockReport() {
         $query = "Select S.Stockid,S.StockName,S.UnitPrice,S.Type, " .
-                "S.WeightUnit"
-                . ",SUM(OD.Quantity) as Soldqty,SUM(OD.TotalAmount) as MainTotalPrice"
+                "S.WeightUnit, SUM(OD.Quantity) as Soldqty,SUM(OD.SubPrice) as MainTotalPrice"
                 . " from Stock S, Orderdetail OD "
                 . "Where S.Stockid=OD.Stockid "
                 . "Group by OD.Stockid";
@@ -115,7 +114,6 @@ class StockDA {
             if ($rs === false) {
                 echo 'Without Data';
             } else {
-
                 return $rs;
             }
         } catch (Exception $ex) {
