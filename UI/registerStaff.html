@@ -1,0 +1,25 @@
+<!--
+Author     : Jaren Yeap Wei Loon
+Student ID : 19WMR09599 
+-->
+
+<html>
+    <head>
+        <title>Registration Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Staff Registration</h2>
+        <form action="..\XML\process_registration.php" method="POST">
+            <br/>
+            <p>Staff ID   :<input type="text" name="id" size="7"/></p>
+            <p>Staff Name :<input type="text" name="nameS" size="40"/></p>
+            <p>Staff Email:<input type="text" name="emailS" size="30"/></p>
+            <p>Password      :<input type="text" name="passS" size="18"/></p>
+            <p>Position :<input type="text" name="position" size="15"/></p>
+            <input type="submit" name="registerS" value="Register"/>
+            <input type="reset" name="reset" value="Reset"/>
+        </form>
+    </body>
+</html>

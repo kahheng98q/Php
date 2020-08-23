@@ -1,0 +1,17 @@
+<!--
+Author     : Jaren Yeap Wei Loon
+Student ID : 19WMR09599 
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="profile.xsl"?>
+<Login>
+
+    <user type="Customer">
+        <id>C001</id>
+        <name>Heng</name>
+        <email>hengg@gmail.com</email>
+        <password>123123</password>
+        <dob>0000-00-00</dob>
+        <address>Kampung</address>
+    </user>
+</Login>
