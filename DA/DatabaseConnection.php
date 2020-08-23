@@ -2,7 +2,7 @@
 <?php
 //author: Chia Yang Jie
 require_once '../Domain/order.php';
-require_once '../security/validateStatus.php';
+require_once '../Security/validateStatus.php';
 
 class DatabaseConnection {
 

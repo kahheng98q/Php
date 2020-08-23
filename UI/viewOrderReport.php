@@ -1,6 +1,6 @@
 <?php
 //author: Chia Yang Jie
-    require_once '../xml/orderDom.php';
+    require_once '../XML/orderDom.php';
 ?>
 
 <html>
@@ -18,6 +18,6 @@
        
         if(isset($_POST['submit']))
         {
-            $orderParser = new orderDom("../xml/orders.xml");
+            $orderParser = new orderDom("../XML/orders.xml");
         }
         ?>

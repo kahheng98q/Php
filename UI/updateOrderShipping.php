@@ -19,14 +19,14 @@ require_once '../DA/DatabaseConnection.php';
                 $order = $_POST['updateOrder'];
                 list($orderId, $status) = explode(' ', $order);
                 if ($db->updateTable($orderId, $status) == true) {
-                    header("Location: http://localhost/Assignment/UI/resultUpdate.php");
+                    header("Location: ../UI/resultUpdate.php");
                     exit;
                 }
             } else if (isset($_POST['cancelOrder'])) {
                 $order = $_POST['cancelOrder'];
                 list($orderId, $status) = explode(' ', $order);
                 if ($db->updateTable($orderId, $status) == true) {
-                    header("Location: http://localhost/Assignment/UI/resultUpdate.php");
+                    header("Location: ../UI/resultUpdate.php");
                     exit;
                 }
             } else {

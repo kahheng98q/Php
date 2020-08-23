@@ -9,7 +9,7 @@ class createOrderXML {
 
     function createXML($array) {
 
-        $filePath = '../xml/orders.xml';
+        $filePath = '../XML/orders.xml';
         $dom = new DOMDocument('1.0', 'UTF-8');
         $implementation = new DOMImplementation();
         $dom->appendChild($implementation->createDocumentType('orders SYSTEM \'orders.dtd\''));

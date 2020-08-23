@@ -2,7 +2,7 @@
 //author: Chia Yang Jie
 require_once '../lib/nusoap.php';
 
-$client = new nusoap_client("http://localhost/Assignment/ClientServer/getOrder.php?wsdl");
+$client = new nusoap_client("http://localhost/PhpAssignment/Webservice/getOrder.php?wsdl");
 ?>
 
 <h2>Check Order Status Service Client</h2>
