@@ -1,16 +1,6 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of StockFactory
- *
- * @author user
- */
+//author : Cheah Kah Heng
 require_once 'StockLiquid.php';
 require_once 'StockSolid.php';
 

@@ -1,5 +1,5 @@
 <?php
-
+//author : Cheah Kah Heng
 require_once '../Domain/FactoryMethod/StockFactory.php';
 require_once 'ManageStockDA.php';
 require_once '../Domain/ManageStock.php';

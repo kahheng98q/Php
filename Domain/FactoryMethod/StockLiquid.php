@@ -1,5 +1,5 @@
 <?php
-
+//author : Cheah Kah Heng
 require_once 'Stock.php';
 
 class StockLiquid extends Stock {

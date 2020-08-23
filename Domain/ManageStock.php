@@ -1,5 +1,5 @@
 <?php
-
+//author : Cheah Kah Heng
 
 class ManageStock {
 

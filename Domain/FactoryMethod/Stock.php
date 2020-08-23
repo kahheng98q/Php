@@ -1,5 +1,5 @@
 <?php
-
+//author : Cheah Kah Heng
 abstract class Stock {
 
     private $StockID;

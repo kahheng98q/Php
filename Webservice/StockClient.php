@@ -1,4 +1,5 @@
 <?php
+//author : Cheah Kah Heng
 require_once '../lib/nusoap.php';
 
 $client = new nusoap_client("http://localhost/PhpAssignment/Webservice/StockWebServer.php?wsdl");

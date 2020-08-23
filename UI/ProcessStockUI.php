@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 
 <?php
+//author : Cheah Kah Heng
+
 require_once '../DA/StockDA.php';
 require_once '../XML/StockDomParser.php';
 require_once '../Security/StockSecurity.php';
+
 ?>
 <html>
     <head>
