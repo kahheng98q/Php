@@ -6,12 +6,12 @@ Student ID : 19WMR09599
 
 require_once '..\DA\StaffDA.php';
 require_once '..\DA\CustDA.php';
-require_once '../XML/login.xml';
-require_once '..\XML\UserDetails.php';
+require_once '..\XML\login.xml';
+
 
 session_start();
 
-$xml = simplexml_load_file("../XML/login.xml");
+$xml = simplexml_load_file("..\XML\login.xml");
 $sxe = new SimpleXMLElement($xml->asXML());
 
 if (isset($_POST['login'])) {
@@ -46,8 +46,8 @@ if (isset($_POST['login'])) {
             $user->addChild('email', $staff->getEmail());
             $user->addChild('password', $staff->getPass());
             $user->addChild('position', $staff->getPosition());
-            $sxe->asXML("login.xml");
-//            getStaffXML();
+            $sxe->asXML("..\XML\login.xml");
+            //getStaffXML();
             header("Location: http://localhost/PhpAssignment/XML/login.xml");
             
         } else {
@@ -82,7 +82,7 @@ if (isset($_POST['login'])) {
                 $user->addChild('password', $cust->getPass());
                 $user->addChild('dob', $cust->getDOB());
                 $user->addChild('address', $cust->getAddress());
-                $sxe->asXML("login.xml");
+                $sxe->asXML("..\XML\login.xml");
                 //getCusotmerXML();
                 header("Location: http://localhost/PhpAssignment/XML/login.xml");
             } else {

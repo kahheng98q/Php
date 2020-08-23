@@ -6,12 +6,12 @@ Student ID : 19WMR09599
 
 require_once '..\Domain\Customer.php';
 require_once '..\Domain\Staff.php';
-require_once 'login.xml';
+require_once '..\XML\login.xml';
 
 function getCustomerXML() {
     $doc = new DOMDocument;
     $doc->preserveWhiteSpace = false;
-    $doc->load('../XML/login.xml');
+    $doc->load('..\XML\login.xml');
     $xpath = new DOMXPath($doc);
     $query = "//Login/user[@type = 'Customer']";
     $nodes = $xpath->query($query);

@@ -1,7 +1,3 @@
-<!--
-Author     : Jaren Yeap Wei Loon
-Student ID : 19WMR09599 
--->
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
     <xsl:template match="/">
@@ -36,8 +32,8 @@ Student ID : 19WMR09599
                 </tr>
         </table>
         <!--change address accordingly-->
-        <br/><input type="submit" name="order" value="Order Page" onclick="location.href='http://localhost/Assignment/UI/OrderCustomer.php';"/>
-        <input type="submit" name="ship" value="Track Parcel" onclick="location.href='http://localhost/Assignment/UI/ShippingCustomer.php';"/>
+        <br/><input type="submit" name="order" value="Order Page" onclick="location.href='http://localhost/PhpAssignment/UI/OrderCustomer.php';"/>
+        <input type="submit" name="ship" value="Track Parcel" onclick="location.href='http://localhost/PhpAssignment/UI/ShippingCustomer.php';"/>
     </xsl:template>
     <xsl:template match="user[@type='Staff']">
         <p>Staff ID: <xsl:value-of select="id"/></p>
@@ -57,6 +53,6 @@ Student ID : 19WMR09599
         </table>
         <!--change address accordingly-->
         <br/><input type="submit" name="stock" value="Stock Management" onclick="location.href='http://localhost/PhpAssignment/UI/ManageStockUI.php';"/>
-        <input type="submit" name="Sship" value="Manage Shipment" onclick="location.href='http://localhost/Assignment/UI/ShippingStaff.php';"/>
+        <input type="submit" name="Sship" value="Manage Shipment" onclick="location.href='http://localhost/PhpAssignment/UI/ShippingStaff.php';"/>
     </xsl:template>
 </xsl:stylesheet>
