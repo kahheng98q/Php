@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--author: Chia Yang Jie-->
+<!ELEMENT orders (order*)>
+<!ELEMENT order (OrderDate, OrderStatus,TotalAmount,CustomerId)>
+<!ATTLIST order  OrderID ID #REQUIRED>
+<!ELEMENT OrderDate (#PCDATA)>
+<!ELEMENT OrderStatus (#PCDATA)>
+<!ELEMENT TotalAmount (#PCDATA)>
+<!ELEMENT CustomerId (#PCDATA)>
+
+
