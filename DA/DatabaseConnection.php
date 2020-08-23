@@ -47,7 +47,7 @@ class DatabaseConnection {
             echo "<td>" . $row['OrderDate'] . "</td>";
             echo "<td>" . $row['OrderStatus'] . "</td>";
             echo "<td>" . $row['TotalAmount'] . "</td>";
-            echo "<td>" . $row['CustomerId'] . "</td>";
+            echo "<td>" . $row['CustomerID'] . "</td>";
             if ($row['OrderStatus'] == "Pending") {
                 echo "<td><button type='submit' value='" . $row['OrderID'] . " Sending' name = 'updateOrder'>update</button></td>";
                 echo "<td><button type='submit' value='" . $row['OrderID'] . " Cancel' name = 'cancelOrder'>cancel</button></td>";
