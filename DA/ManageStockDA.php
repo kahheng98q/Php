@@ -12,7 +12,6 @@ class ManageStockDA {
 
     public function connectdb() {
         try {
-
             $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbName;
             $this->db = new PDO($dsn, $this->user, $this->pass);
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -27,7 +26,7 @@ class ManageStockDA {
 
     public function AddManageStock($manageStock) {
         $query = "Insert Into ManageStock (EditDate,Operation,StockID,StaffID) values (?,?,?,?)";
-//        echo $manageStock->EditDate.$manageStock->Operation.$manageStock->StockID.$manageStock->StaffID;
+
         try {
             $pstm = $this->db->prepare($query);
             $pstm->bindParam(1, $manageStock->EditDate, PDO::PARAM_STR);

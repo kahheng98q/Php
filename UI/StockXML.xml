@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE stocks SYSTEM 'Stocks.dtd'>
-<stocks><stock stockid="ST101"><stockName>Book</stockName><unitPrice>2.00</unitPrice><type>Solid</type><weightUnit>5.00</weightUnit><soldqty>15</soldqty><mainTotalPrice>45.00</mainTotalPrice></stock><stock stockid="ST102"><stockName>Bag</stockName><unitPrice>10.00</unitPrice><type>Solid</type><weightUnit>4.00</weightUnit><soldqty>9</soldqty><mainTotalPrice>18.00</mainTotalPrice></stock></stocks>

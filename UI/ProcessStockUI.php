@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <?php
-require_once '../FactoryMethod/StockLiquid.php';
 require_once '../DA/StockDA.php';
 require_once '../XML/StockDomParser.php';
+require_once '../Security/StockSecurity.php';
 ?>
 <html>
     <head>
@@ -18,7 +14,7 @@ require_once '../XML/StockDomParser.php';
         <?php
         $stockFactory = new StockFactory();
         $stockDA = new StockDA();
-
+        $stockSecurity = new StockSecurity();
         $staffID = $_POST["staffid"];
 
         if (isset($_POST['Addbtn'])) {
@@ -55,10 +51,6 @@ require_once '../XML/StockDomParser.php';
                     echo "<p>Weight Unit:<input type=\"text\" name=\"UpdateWeightUnit\" value=\"" . $rs['WeightUnit'] . "\" size=\"20\"/></p>";
                     ?>
 
-        <!--                    <p> Unit Price:<input type="text" name="UpdateUnitPrice" value="" size="20"/></p>
-                            <p> Type:<input type="text" name="UpdateType" value="" size="20"/></p>
-                            <p> Quantity:<input type="text" name="UpdateQuantity" value="" size="20"/></p>
-                            <p> Weight Unit:<input type="text" name="UpdateWeightUnit" value="" size="20"/></p>-->
                     <input type="submit" value="update" name="UpdateStockbtn" />
                 </form>
 
@@ -67,16 +59,20 @@ require_once '../XML/StockDomParser.php';
         } else if (isset($_POST['Reportbtn'])) {
 
             $stockParser = new StockDomParser("../XML/StockXML.xml");
-        } else if (isset($_POST['insertStockbtn'])) {
+        } else if (isset($_POST['insertStockbtn'])) {// insert btn 
 
             $stockname = $_POST["StockName"];
             $stockprice = $_POST["UnitPrice"];
             $stocktype = $_POST["Type"];
             $stockqty = $_POST["Quantity"];
             $stockUnit = $_POST["WeightUnit"];
-            $stock = $stockFactory->setStock(null, $stockname, $stockprice, $stocktype, $stockqty, $stockUnit);
-            $stockDA->AddStock($stock, $staffID);
-        } else if (isset($_POST['UpdateStockbtn'])) {
+//validate the data
+            if ($stockSecurity->validateStock($stockprice,$stockqty,$stockUnit,$stocktype)) {
+                $stock = $stockFactory->setStock(null, $stockname, $stockprice, $stocktype, $stockqty, $stockUnit);
+                echo 'True';
+                $stockDA->AddStock($stock, $staffID);
+            }
+        } else if (isset($_POST['UpdateStockbtn'])) {// update btn
 
             $stockid = $_POST["UpdateStockid"];
             $stockname = $_POST["UpdateStockName"];
@@ -84,8 +80,12 @@ require_once '../XML/StockDomParser.php';
             $stocktype = $_POST["UpdateType"];
             $stockqty = $_POST["UpdateQuantity"];
             $stockUnit = $_POST["UpdateWeightUnit"];
-            $stock = $stockFactory->setStock($stockid, $stockname, $stockprice, $stocktype, $stockqty, $stockUnit);
-            $stockDA->UpdateStock($stock, $staffID);
+//validate the data
+            if ($stockSecurity->validateStock($stockprice,$stockqty,$stockUnit,$stocktype)) {
+                $stock = $stockFactory->setStock($stockid, $stockname, $stockprice, $stocktype, $stockqty, $stockUnit);
+                echo 'True';
+                $stockDA->UpdateStock($stock, $staffID);
+            }
         }
         ?> <br/> <br/>
 

@@ -32,7 +32,7 @@ class StockFactory {
         } else if (strcasecmp(strtoupper($Type), "LIQUID") == 0) {
             return new StockLiquid($StockID, $StockName, $UnitPrice, $Type, $Quantity, $Volume);
         } else {
-            
+            echo "Invalid Stock information.";
         }
     }
 

@@ -1,7 +1,6 @@
 <?php
 
-require_once '../FactoryMethod/StockFactory.php';
-require_once '../FactoryMethod/StockLiquid.php';
+require_once '../Domain/FactoryMethod/StockFactory.php';
 require_once 'ManageStockDA.php';
 require_once '../Domain/ManageStock.php';
 
@@ -18,7 +17,7 @@ class StockDA {
 
             $dsn = "mysql:host=" . $this->host . ";dbname=" . $this->dbName;
             $this->db = new PDO($dsn, $this->user, $this->pass);
-            $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          
         } catch (PDOException $ex) {
             die("Database connection failed: " . $ex->getMessage());
         }
@@ -44,7 +43,6 @@ class StockDA {
             $manageStock = new ManageStock(null, date("Y-m-d"), "Insert", $last_id, $staffid);
 
             $manageStockDA->AddManageStock($manageStock);
-//            echo $last_id;
             echo "<h3>Insert Successful</h3>";
         } catch (Exception $ex) {
             echo 'Failed to insert Stock';
@@ -72,19 +70,6 @@ class StockDA {
         }
     }
 
-//    public function deleteStock($stockId) {
-//        $query = 'DELETE FROM Stock WHERE StockID =?';
-//        try {
-//            $pstm = $this->db->prepare($query);
-//
-//            $pstm->bindParam(1, $stockId, PDO::PARAM_STR);
-//            $pstm->execute();
-//            echo "<h3>" . $stockId . "Delete Successful</h3>";
-//            return $pstm->rowCount();
-//        } catch (Exception $ex) {
-//            echo $ex->getMessage();
-//        }
-//    }
 
     public function retrieveStocks() {
         $query = "Select * from Stock";
@@ -106,7 +91,6 @@ class StockDA {
             if ($rs === false) {
                 return $rs;
             } else {
-//                echo $rs["StockID"];
                 return $rs;
             }
         } catch (Exception $ex) {
@@ -141,22 +125,4 @@ class StockDA {
 
 }
 
-$work = new StockDA();
-$S = new StockFactory();
-//echo "Today is " . date("d/m/Y") . "<br>";
-//echo "Today is " . date("l");
-//$shit = $S->setStock( "GOOD", "10.00", "LIQUID", 4, 3.00);
-//$shit = $S->setStock("Coke", 10.00, "LIQUID", 4, 3.00);
-//$work->AddStock($shit);
-//$work->UpdateStock($shit);
-//$work->deleteStock("ST008")
-//$gg=$work->retrieveStock("ST007");
-//echo $gg['StockID'];
-//$result = $work->retrieveStockReport();
-//
-//foreach ($result as $row) {
-////            echo '1';
-//    echo $row['Stockid']."<br/>";
-//}
-//$work->getID();
 ?>

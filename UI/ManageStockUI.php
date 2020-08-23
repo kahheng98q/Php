@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <?php
-require_once '../FactoryMethod/StockLiquid.php';
+require_once '../Domain/FactoryMethod/StockFactory.php';
 require_once '../DA/StockDA.php';
 ?>
 
@@ -20,7 +16,7 @@ require_once '../DA/StockDA.php';
         $stockFactory = new StockFactory();
         $stockDA = new StockDA();
         $result = $stockDA->retrieveStocks();
-//        $staffID = $_POST["staffID"];
+
         $staffID = "S001";
         echo "<table><tr><th>Stock ID</th><th>Stock Name</th><th>Unit Price</th><th>Type</th><th>QTY</th><th>Unit</th></tr><br/>";
         foreach ($result as $row) {

@@ -14,9 +14,6 @@ $client = new nusoap_client("http://localhost/PhpAssignment/Webservice/StockWebS
 
 <?php
 if (isset($_POST['getStockList'])) {
-//    $amount=$_POST['amount'];
-//    $duration=$_POST['duration'];
-//    $rate=$_POST['rate'];
 
     $response = $client->call('getAllStocks', array());
     if (empty($response))
@@ -40,6 +37,6 @@ if (isset($_POST['getStockList'])) {
     if (empty($response))
         echo "No Record found with stockid: $stockid";
     else {
-        echo "<h3>Event information: <br/>" . $response . "</h3>";
+        echo "<h3>Stock information: <br/>" . $response . "</h3>";
     }
 }

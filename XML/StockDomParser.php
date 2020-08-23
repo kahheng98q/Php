@@ -1,6 +1,6 @@
 <?php
 
-require_once '../FactoryMethod/StockFactory.php';
+require_once '../Domain/FactoryMethod/StockFactory.php';
 require_once 'CreateStockXML.php';
 require_once '../DA/StockDA.php';
 

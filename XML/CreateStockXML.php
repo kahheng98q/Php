@@ -11,7 +11,7 @@
  *
  * @author user
  */
-require_once '../FactoryMethod/StockFactory.php';
+require_once '../Domain/FactoryMethod/StockFactory.php';
 
 
 class CreateStockXML {
@@ -22,7 +22,7 @@ class CreateStockXML {
 
     function createXMLfile($stockArray) {
 
-        $filePath = 'StockXML.xml';
+        $filePath = '../XML/StockXML.xml';
         $dom = new DOMDocument('1.0', 'UTF-8');
         $implementation = new DOMImplementation();
         $dom->appendChild($implementation->createDocumentType('stocks SYSTEM \'Stocks.dtd\''));
