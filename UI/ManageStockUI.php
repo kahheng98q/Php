@@ -40,6 +40,7 @@ require_once '../XML/UserDetails.php';
             <input type="submit" value="Display Stock Summary Report" name="Reportbtn" />
         </form>
 
+        
 
     </body>
 </html>
