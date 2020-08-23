@@ -9,7 +9,7 @@ require_once '..\DA\StaffDA.php';
 if (isset($_POST['staff'])) {
     $_SESSION["attempt"] = 0;
     $_SESSION["locked"] = 0;
-    header("Location: http://localhost/Assignment/UI/registerCheck.php");
+    header("Location: http://localhost/PhpAssignment/UI/registerCheck.php");
     exit();
 }
 $err = "";
@@ -30,7 +30,7 @@ if (isset($_POST['register'])) {
         $err .= "Home Address are required.\\n";
     }
     if (strcmp($err, "") != 0) {
-         echo '<script>alert("'.$err.'");window.location.href="http://localhost/Assignment/UI/Registration.html";</script>';
+         echo '<script>alert("'.$err.'");window.location.href="http://localhost/PhpAssignment/UI/Registration.html";</script>';
         exit;
     }
     $name = $_POST['name'];
@@ -48,7 +48,7 @@ if (isset($_POST['register'])) {
         $err .= "Password entered doen't not match the requirement.\\n";
     }
     if (strcmp($err, "") != 0) {
-        echo '<script>alert("'.$err.'");window.location.href="http://localhost/Assignment/UI/Registration.html";</script>';
+        echo '<script>alert("'.$err.'");window.location.href="http://localhost/PhpAssignment/UI/Registration.html";</script>';
     } else {
         $id = substr(getLastCustomerID(),1);
         $id = (int)$id+1;
@@ -61,7 +61,7 @@ if (isset($_POST['register'])) {
         
         $cust = new Customer($id, $name, $email, $pass, $dob, $add);
         createCustomer($cust);
-        echo '<script>alert("Customer Registered Successful!");window.location.href="http://localhost/Assignment/UI/Login.php";</script>';
+        echo '<script>alert("Customer Registered Successful!");window.location.href="http://localhost/PhpAssignment/UI/Registration.html";</script>';
     }
 }
 if (isset($_POST['registerS'])) {
@@ -81,7 +81,7 @@ if (isset($_POST['registerS'])) {
         $err .= "Home Address are required.\\n";
     }
     if (strcmp($err, "") != 0) {
-        echo '<script>alert("'.$err.'");window.location.href="http://localhost/Assignment/UI/Registration.html";</script>';
+        echo '<script>alert("'.$err.'");window.location.href="http://localhost/PhpAssignment/UI/Registration.html";</script>';
         exit;
     }
     $Sid = $_POST['id'];
@@ -106,7 +106,7 @@ if (isset($_POST['registerS'])) {
     } else {  
         $staff = new Staff($Sid, $name, $email, $pass, $position);
         createStaff($staff);
-        echo '<script>alert("Staff Registered Successful!");window.location.href="http://localhost/Assignment/UI/Login.php";</script>';
+        echo '<script>alert("Staff Registered Successful!");window.location.href="http://localhost/PhpAssignment/UI/Login.php";</script>';
     }
 }
 

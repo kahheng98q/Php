@@ -33,7 +33,6 @@ class StockSecurity {
                 ;
             }
         }
-        echo $message;
         if ($error == 0) {
 
             return true;

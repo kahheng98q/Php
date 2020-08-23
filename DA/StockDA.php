@@ -45,7 +45,7 @@ class StockDA {
             $manageStockDA->AddManageStock($manageStock);
             echo "<h3>Insert Successful</h3>";
         } catch (Exception $ex) {
-            echo 'Failed to insert Stock';
+            echo 'Failed to insert Stock'.$ex->getMessage();
         }
     }
 

@@ -46,7 +46,7 @@ if (isset($_POST['login'])) {
             $user->addChild('email', $staff->getEmail());
             $user->addChild('password', $staff->getPass());
             $user->addChild('position', $staff->getPosition());
-            $sxe->asXML("..\login.xml");
+            $sxe->asXML("login.xml");
             //getStaffXML();
             header("Location: http://localhost/PhpAssignment/XML/login.xml");
             
@@ -113,14 +113,4 @@ if (isset($_POST['login'])) {
 }
    
    
-//function getIP() {
-//    if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-//        $ip = $_SERVER['HTTP_CLIENT_IP'];
-//    } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-//        $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-//    } else {
-//        $ip = $_SERVER['REMOTE_ADDR'];
-//    }
-//    return $ip;
-//}
 

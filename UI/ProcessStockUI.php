@@ -72,7 +72,6 @@ require_once '../Security/StockSecurity.php';
 //validate the data
             if ($stockSecurity->validateStock($stockprice,$stockqty,$stockUnit,$stocktype)) {
                 $stock = $stockFactory->setStock(null, $stockname, $stockprice, $stocktype, $stockqty, $stockUnit);
-                echo 'True';
                 $stockDA->AddStock($stock, $staffID);
             }
         } else if (isset($_POST['UpdateStockbtn'])) {// update btn
@@ -86,7 +85,6 @@ require_once '../Security/StockSecurity.php';
 //validate the data
             if ($stockSecurity->validateStock($stockprice,$stockqty,$stockUnit,$stocktype)) {
                 $stock = $stockFactory->setStock($stockid, $stockname, $stockprice, $stocktype, $stockqty, $stockUnit);
-                echo 'True';
                 $stockDA->UpdateStock($stock, $staffID);
             }
         }
