@@ -70,7 +70,7 @@ require_once '../Security/StockSecurity.php';
             $stockqty = $_POST["Quantity"];
             $stockUnit = $_POST["WeightUnit"];
 //validate the data
-            if ($stockSecurity->validateStock($stockprice,$stockqty,$stockUnit,$stocktype)) {
+            if ($stockSecurity->validateStock($stockname,$stockprice,$stockqty,$stockUnit,$stocktype)) {
                 $stock = $stockFactory->setStock(null, $stockname, $stockprice, $stocktype, $stockqty, $stockUnit);
                 $stockDA->AddStock($stock, $staffID);
             }
@@ -83,7 +83,7 @@ require_once '../Security/StockSecurity.php';
             $stockqty = $_POST["UpdateQuantity"];
             $stockUnit = $_POST["UpdateWeightUnit"];
 //validate the data
-            if ($stockSecurity->validateStock($stockprice,$stockqty,$stockUnit,$stocktype)) {
+            if ($stockSecurity->validateStock($stockname,$stockprice,$stockqty,$stockUnit,$stocktype)) {
                 $stock = $stockFactory->setStock($stockid, $stockname, $stockprice, $stocktype, $stockqty, $stockUnit);
                 $stockDA->UpdateStock($stock, $staffID);
             }

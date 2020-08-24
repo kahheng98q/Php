@@ -1,4 +1,5 @@
 <?php
+
 //author : Cheah Kah Heng
 require_once '../Domain/FactoryMethod/StockFactory.php';
 
@@ -8,9 +9,14 @@ class StockSecurity {
         
     }
 
-    public function validateStock($UnitPrice, $Quantity, $WeightUnit, $Type) {
+    public function validateStock($Name, $UnitPrice, $Quantity, $WeightUnit, $Type) {
         $message = "";
         $error = 0;
+
+        if (empty($Name)) {
+            $message .= "The Name can not be empty.<br/>";
+            $error = $error + 1;
+        }
 
         if (!is_numeric($UnitPrice)) {
             $message .= "The Unit price must be digit.<br/>";
@@ -25,9 +31,9 @@ class StockSecurity {
             $error = $error + 1;
         }
         if (!(strcmp(strtoupper($Type), "SOLID") == 0)) {
-      
+
             if (!(strcmp(strtoupper($Type), "LIQUID")) == 0) {
-      
+
                 $message .= "The Type must be Solid or Liquid.<br/>";
                 $error = $error + 1;
                 ;
@@ -37,6 +43,7 @@ class StockSecurity {
 
             return true;
         } else {
+            echo $message;
             return false;
         }
     }
