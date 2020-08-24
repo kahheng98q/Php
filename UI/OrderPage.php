@@ -4,8 +4,8 @@ Joseph Yeak Jian King
 -->
 
 <?php
-require_once '../Domain/Composite/OrderComposite.php';
-require_once '../Domain/Composite/PaymentComposite.php';
+require_once '../DA/Composite/OrderComposite.php';
+require_once '../DA/Composite/PaymentComposite.php';
 require_once '../Domain/Customer.php';
 require_once '../XML/UserDetails.php';
 
@@ -37,7 +37,8 @@ if (isset($_POST['payBtn'])) {
         <form action="CartPage.php" method="POST">
             <?php echo "<input type=\"hidden\" name=\"custID\" value=\"" . $customerID . "\"/>"; ?>
             <input type="submit" value="Cart" name="chgCart"/>
-
+            </form>
+        
         <h1>Order Page</h1>
         <?php
         $orderComposite = new OrderComposite();

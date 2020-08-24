@@ -12,7 +12,7 @@
  * @author Joseph Yeak Jian King
  */
 require_once '../lib/nusoap.php';
-require_once '../Domain/Composite/OrderComposite.php';
+require_once '../DA/Composite/OrderComposite.php';
 
 function retrieveOrderDetails($OrderID) {
     $orderComposite = new OrderComposite();

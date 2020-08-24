@@ -11,7 +11,6 @@ $client = new nusoap_client("http://localhost/PhpAssignment/WebService/OrderServ
 <form  method="POST">
     <p>Order ID: <input type="text" name="orderID" value="" size="4"/></p>
     <input type="submit" value="Search" name="searchBtn" />
-    <input type="submit" value="All" name="allBtn" />
 </form>
 
 

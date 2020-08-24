@@ -140,7 +140,7 @@ class OrderComposite {
         }
     }
 
-    public function getOrderDetailServer($orderID) {
+    public function getOrderDetailsServer($orderID) {
         $query = "SELECT * FROM OrderDetail OD, Stock S WHERE OD.OrderID='" . $orderID . "' AND OD.StockID=S.StockID";
 
         $resultSet = $this->db->query($query);

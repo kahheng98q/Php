@@ -4,7 +4,7 @@
 Joseph Yeak Jian King
  */
 
-require_once '../Domain/Composite/CartComposite.php';
+require_once '../DA/Composite/CartComposite.php';
 require_once 'CreateCartXML.php';
 
 class CartDomParser {

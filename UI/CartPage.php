@@ -3,7 +3,7 @@
 Joseph Yeak Jian King
 -->
 <?php
-require_once '../Domain/Composite/CartComposite.php';
+require_once '../DA/Composite/CartComposite.php';
 require_once '../XML/CartDomParser.php';
 //require_once '../Domain/Customer.php';
 //require_once '../Domain/UserDetails.php';

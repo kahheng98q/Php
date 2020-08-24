@@ -4,7 +4,7 @@ Joseph Yeak Jian King
 -->
 
 <?php
-require_once '../Domain/Composite/PaymentComposite.php';
+require_once '../DA/Composite/PaymentComposite.php';
 //require_once '../Domain/Customer.php';
 //require_once '../Domain/UserDetails.php';
 
