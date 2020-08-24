@@ -4,4 +4,4 @@
     
     
     
-<user type="Staff"><id>19SSM08</id><name>Heng</name><email>heng@gmail.com</email><password>123123</password><position>Senior Manager</position></user></Login>
+<user type="Customer"><id>C002</id><name>jacky</name><email>jacky@gmail.com</email><password>123123</password><dob>2020-08-19</dob><address>adasdasdasdad</address></user></Login>
