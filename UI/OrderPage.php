@@ -37,11 +37,6 @@ if (isset($_POST['payBtn'])) {
         <form action="CartPage.php" method="POST">
             <?php echo "<input type=\"hidden\" name=\"custID\" value=\"" . $customerID . "\"/>"; ?>
             <input type="submit" value="Cart" name="chgCart"/>
-        </form>
-        <form action="../WebService/OrderClient.php" method="POST">
-            <?php echo "<input type=\"hidden\" name=\"custID\" value=\"" . $customerID . "\"/>"; ?>
-            <input type="submit" value="Order History" name="chgWeb"/>
-        </form>
 
         <h1>Order Page</h1>
         <?php

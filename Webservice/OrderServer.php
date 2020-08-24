@@ -1,23 +1,30 @@
-<!--
-Joseph Yeak Jian King
--->
 <?php
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of OrderServer
+ *
+ * @author Joseph Yeak Jian King
+ */
 require_once '../lib/nusoap.php';
 require_once '../Domain/Composite/OrderComposite.php';
 
-function retrieveOrderDetails($orderID) {
+function retrieveOrderDetails($OrderID) {
     $orderComposite = new OrderComposite();
-    $rs = $orderComposite->getOrderDetailServer($orderID);
+    $rs = $orderComposite->getOrderDetailsServer($OrderID);
+
     $result = "";
     $result .= "<table>";
-    $result .= "<tr><th>Stock ID</th><th>Stock Name</th><th>Quantity</th><th>Sub Price</th></tr>|";
     foreach ($rs as $row) {
         $result .= "<tr><td>" . $row['StockID'] . "</td><td>" . $row['StockName'] . "</td><td>"
-            . $row['Quantity'] . "</td><td>" . $row['SubPrice'] . "</td></tr>|";
+            . $row['Quantity'] . "</td><td>" . $row['SubPrice'] . "</td></tr>" . "|";
     }
-    $result .= "</table>";
-    
+    $result .= "</table>";   
     return $result;
 }
 
@@ -29,6 +36,3 @@ $server->register("retrieveOrderDetails",
         array("return" => "xsd:string"));
 
 $server->service(file_get_contents("php://input"));
-
-
-
