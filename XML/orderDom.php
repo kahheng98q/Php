@@ -24,7 +24,7 @@ class orderDom {
 
     public function readFile($filename) {
         $xml = simplexml_load_file($filename);
-        $orderGet = $xml->xpath("/orders/order[OrderStatus='Pending']");
+        $orderGet = $xml->xpath("/orders/order[OrderStatus='Receive']");
         echo "<h3>Total order received report</h3>";
         echo "<table width='70%'><tr><th>Order Id</th><th>Date</th><th>TotalAmount</th><th>Customer Id</th></tr>";
         echo "<tr></tr>";

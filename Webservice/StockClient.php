@@ -5,7 +5,7 @@ require_once '../lib/nusoap.php';
 $client = new nusoap_client("http://localhost/PhpAssignment/Webservice/StockWebServer.php?wsdl");
 ?>
 
-<h3> Loan Web Service Client</h3>
+<h3> Stock Web Service Client</h3>
 <form  method="POST">
     <p>Stock ID: <input type="text" name="stockid" value="" size="20"/></p>
     <input type="submit" value="Get All Stocks" name="getStockList" />
