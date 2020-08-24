@@ -53,6 +53,6 @@
         </table>
         <!--change address accordingly-->
         <br/><input type="submit" name="stock" value="Stock Management" onclick="location.href='http://localhost/PhpAssignment/UI/ManageStockUI.php';"/>
-        <input type="submit" name="Sship" value="Manage Shipment" onclick="location.href='http://localhost/PhpAssignment/UI/ShippingStaff.php';"/>
+        <input type="submit" name="Sship" value="Manage Shipment" onclick="location.href='http://localhost/PhpAssignment/UI/updateOrderShipping.php';"/>
     </xsl:template>
 </xsl:stylesheet>
