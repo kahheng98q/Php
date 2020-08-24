@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Joseph Yeak Jian King
+-->
+
+<!--
+    TODO define vocabulary identification data
+    PUBLIC ID  : -//vendor//vocabulary//EN
+    SYSTEM ID  : http://server/path/__NAME__
+-->
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+
+<!ELEMENT carts (cart*)>
+<!ELEMENT cart (StockID,StockName,Quantity,SubPrice)>
+<!ATTLIST cart CartID ID #REQUIRED>
+<!ELEMENT StockID (#PCDATA)>
+<!ELEMENT StockName (#PCDATA)>
+<!ELEMENT Quantity (#PCDATA)>
+<!ELEMENT SubPrice (#PCDATA)>

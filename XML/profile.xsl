@@ -32,7 +32,7 @@
                 </tr>
         </table>
         <!--change address accordingly-->
-        <br/><input type="submit" name="order" value="Order Page" onclick="location.href='http://localhost/PhpAssignment/UI/OrderCustomer.php';"/>
+        <br/><input type="submit" name="order" value="Order Page" onclick="location.href='http://localhost/PhpAssignment/UI/OrderPage.php';"/>
         <input type="submit" name="ship" value="Track Parcel" onclick="location.href='http://localhost/PhpAssignment/UI/ShippingCustomer.php';"/>
     </xsl:template>
     <xsl:template match="user[@type='Staff']">
