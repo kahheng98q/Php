@@ -75,6 +75,25 @@ class DatabaseConnection {
             return $resultSet;
         }
     }
+    public function getOrderByCust($cid) {
+        $query = "SELECT * FROM orders WHERE CustomerId='" . $cid . "'";
+        $rs = $this->mydb->query($query);
+        if ($rs === false) {
+            echo 'Record not Found';
+        } else {
+            echo "<br>";
+            echo "<table>";
+            echo "<tr><th>OrderId</th><th>Date</th><th>Status</th><th>Amount</th></tr>";
+            foreach($rs as $row){
+             echo "<tr>";
+            echo "<td>" . $row['OrderID'] . "</td>";
+            echo "<td>" . $row['OrderDate'] . "</td>";
+            echo "<td>" . $row['OrderStatus'] . "</td>";
+            echo "<td>RM" . $row['TotalAmount'] . "</td>";
+            echo "</tr></table>";
+            }
+        }
+    }
 
     public function updateTable($orderId, $status) {
         $valid = new validateStatus();
