@@ -8,7 +8,9 @@ function getAllOrder() {
     $rs = $db->retrieveAllOrder();
     $output = "";
     foreach ($rs as $row) {
-        $output .= $row['OrderID'] . "&ensp;&ensp;&ensp;" . $row['OrderDate'] . "&ensp;&ensp;&ensp;" . $row['OrderStatus'] . "&ensp;&ensp;&ensp;" . $row['TotalAmount'] . "&ensp;&ensp;&ensp;" . $row['CustomerID'] . "*";
+
+            $output .= $row['OrderID'] . "&ensp;&ensp;&ensp;" . $row['OrderDate'] . "&ensp;&ensp;&ensp;" . $row['OrderStatus'] . "&ensp;&ensp;&ensp;" . $row['TotalAmount'] . "&ensp;&ensp;&ensp;" . $row['CustomerID'] . "*";
+
     }
     return $output;
 }
